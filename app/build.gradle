@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.github.triplet.play'
 
 android {
     compileSdkVersion 30
@@ -28,16 +27,6 @@ android {
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/ASL2.0'
     }
-    signingConfigs {
-        release {
-            storeFile file("kunci.jks")
-            storePassword "251423"
-            keyAlias "key"
-            keyPassword "251423"
-            v1SigningEnabled true
-            v2SigningEnabled true
-        }
-    }
     buildTypes {
         release {
             minifyEnabled false
@@ -48,11 +37,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-}
-play {
-    serviceAccountEmail = 'testing@pc-api-5351586368331448747-1.iam.gserviceaccount.com'
-    pk12File = file('/app/src/pc-api-5351586368331448747-1-6456169d0d68.p12')
-    track = 'production' // Or any of 'alpha' or 'production'
 }
 
 dependencies {
