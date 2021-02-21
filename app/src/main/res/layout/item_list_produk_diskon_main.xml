@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_list_produk_diskon_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginRight="4dp"
+    card_view:cardElevation="3dp"
+    card_view:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_produk_item_list_produk_diskon_main"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/ic_noimage"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_nama_produk_item_list_produk_diskon_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Nama Produk"
+            android:textColor="@color/dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/img_produk_item_list_produk_diskon_main"
+            app:layout_constraintTop_toTopOf="@+id/img_produk_item_list_produk_diskon_main" />
+
+        <TextView
+            android:id="@+id/txt_harga_produk_item_list_produk_diskon_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rp 10.000"
+            android:textColor="#4CAF50"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_nama_produk_item_list_produk_diskon_main"
+            app:layout_constraintStart_toStartOf="@+id/txt_nama_produk_item_list_produk_diskon_main"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nama_produk_item_list_produk_diskon_main" />
+
+        <TextView
+            android:id="@+id/txt_diskon_produk_item_list_produk_diskon_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="Rp 1.000"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_icon_diskon_produk_item_list_produk_toko_saya"
+            app:layout_constraintEnd_toEndOf="@+id/txt_harga_produk_item_list_produk_diskon_main"
+            app:layout_constraintStart_toEndOf="@+id/img_icon_diskon_produk_item_list_produk_toko_saya"
+            app:layout_constraintTop_toTopOf="@+id/img_icon_diskon_produk_item_list_produk_toko_saya" />
+
+        <TextView
+            android:id="@+id/txt_nama_toko_item_list_produk_diskon_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nama Toko"
+            android:textColor="#000"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/txt_nama_produk_item_list_produk_diskon_main"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_nama_toko_item_list_produk_diskon_main"
+            app:layout_constraintTop_toBottomOf="@+id/txt_diskon_produk_item_list_produk_diskon_main"
+            app:srcCompat="@drawable/ic_toko"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/img_icon_diskon_produk_item_list_produk_toko_saya"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="@+id/txt_harga_produk_item_list_produk_diskon_main"
+            app:layout_constraintTop_toBottomOf="@+id/txt_harga_produk_item_list_produk_diskon_main"
+            app:srcCompat="@drawable/ic_diskon"
+            card_view:ignore="VectorDrawableCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

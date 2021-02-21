@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.adam.bossku">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_bossku_foreground"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_bossku_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n"
+        tools:replace="android:icon">
+
+<!--        <activity-->
+<!--            android:name="com.yalantis.ucrop.UCropActivity"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>-->
+
+        <activity android:name=".view.ui.TambahEditProdukActivity" />
+        <activity android:name=".view.ui.BankSayaTambahActivity" />
+        <activity android:name=".view.ui.BankSayaActivity" />
+        <activity android:name=".view.ui.PembayaranPendanaanActivity" />
+        <activity android:name=".view.ui.TambahEditAlamatActivity" />
+        <activity android:name=".view.ui.PilihProvinsiKotaKecamatanActivity" />
+        <activity android:name=".view.ui.PilihAlamatActivity" />
+        <activity android:name=".view.ui.PilihKurirActivity" />
+        <activity android:name=".view.ui.PilihBankActivity" />
+        <activity android:name=".view.ui.KategoriActivity" />
+        <activity android:name=".view.ui.PembayaranBarangActivity" />
+        <activity android:name=".view.ui.TokoSayaActivity" />
+        <activity android:name=".view.ui.DetailPendanaanActivity" />
+        <activity android:name=".view.ui.PendanaanActivity" />
+        <activity android:name=".view.ui.DetailTransaksiActivity" />
+        <activity android:name=".view.ui.AkunActivity" />
+        <activity android:name=".view.ui.PengaturanActivity" />
+        <activity android:name=".view.ui.ProfilActivity" />
+        <activity android:name=".view.ui.KeranjangActivity" />
+        <activity android:name=".view.ui.TransaksiActivity" />
+        <activity android:name=".view.ui.CariProdukActivity" />
+        <activity android:name=".view.ui.DetailProdukActivity" />
+        <activity android:name=".view.ui.SelectRegisterActivity" />
+        <activity android:name=".view.ui.RegisterActivity" />
+        <activity android:name=".view.ui.LoginActivity" />
+        <activity android:name=".view.ui.MainActivity" />
+        <activity android:name=".view.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.PendanaanActivity"
+    android:background="#ebebeb">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_pendanaan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleTextColor="#fff"
+        app:subtitleTextColor="#fff"
+        app:title="Pendanaan"
+        app:navigationIcon="@drawable/ic_arrow_back_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_pendanaan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_pendanaan">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item1_pendaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item2_pendaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terjual" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item3_pendaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beli" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item4_pendaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_item5_pendaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donasiku" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_pendanaan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_pendanaan"
+        tools:listitem="@layout/item_row_pendanaan">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_pendanaan_beli"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_pendanaan"
+        tools:listitem="@layout/item_row_pendanaan_beli" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_pendanaan_jual"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_pendanaan"
+        tools:listitem="@layout/item_row_pendanaan_terjual" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_donasi_saya"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:listitem="@layout/item_row_pendanaan_saya"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_pendanaan" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55950755" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_tambah_pendanaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_add_white"
+        tools:ignore="VectorDrawableCompat" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loader_pendanaan"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline42"
+        app:layout_constraintEnd_toStartOf="@+id/guideline40"
+        app:layout_constraintStart_toStartOf="@+id/guideline39"
+        app:layout_constraintTop_toTopOf="@+id/guideline41" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,6 @@
+<com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_username_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:translationY="5dp"
+                app:addTextChangedListener="@{viewModel.EmailTW()}" />

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".view.ui.ProfilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_profil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back_white"
+            app:subtitleTextColor="#fff"
+            app:title="Data Pribadi"
+            app:titleTextColor="#fff" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_profil">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Pribadi" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data UMKM" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_data_pribadi_profil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_profil">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama_lengkap_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="Nama Lengkap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_foto_pribadi_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nama_lengkap_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_provinsi_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="Provinsi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_nama_lengkap_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_provinsi_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_kota_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="16dp"
+                android:hint="Kota"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_provinsi_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_kota_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_kecamatan_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:hint="Kecamatan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_kota_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_kecamatan_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_telp_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:hint="Telepon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_kecamatan_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_telp_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tanggal_lahir_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:hint="Tanggal Lahir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_telp_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_tanggal_lahir_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jenis_kelamin_profil"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:hint="Jenis Kelamin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_tanggal_lahir_profil">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/edt_jenis_kelamin_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_simpan_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button"
+                android:text="Simpan Perubahan"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/til_jenis_kelamin_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_jenis_kelamin_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_jenis_kelamin_profil" />
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Foto Pribadi"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_foto_pribadi_profil"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:background="@drawable/border_box"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/textView61"
+                app:layout_constraintStart_toStartOf="@+id/textView61"
+                app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_data_umkm_profil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_profil">
+
+            <ImageView
+                android:id="@+id/img_logo_umkm_profil"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_box"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/textView58"
+                app:layout_constraintStart_toStartOf="@+id/textView58"
+                app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nama_brand_umkm_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:hint="Nama Brand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_logo_umkm_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nama_brand_umkm_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nomor_ktp_umkm_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Nomor KTP"
+                app:layout_constraintEnd_toEndOf="@+id/til_nama_brand_umkm_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_nama_brand_umkm_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_nama_brand_umkm_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nomor_ktp_umkm_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Logo"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Foto KTP"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/til_nomor_ktp_umkm_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_nomor_ktp_umkm_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_nomor_ktp_umkm_profil" />
+
+            <ImageView
+                android:id="@+id/img_ktp_umkm_profil"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border_box"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/til_nomor_ktp_umkm_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_nomor_ktp_umkm_profil"
+                app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+            <Button
+                android:id="@+id/btn_simpan_umkm_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button"
+                android:text="Simpan Perubahan"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/img_ktp_umkm_profil"
+                app:layout_constraintStart_toStartOf="@+id/img_ktp_umkm_profil"
+                app:layout_constraintTop_toBottomOf="@+id/img_ktp_umkm_profil" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_data_umkm_mhs_profil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_profil">
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Foto KTM"
+                android:textColor="#000"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_ktm_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="@+id/textView60"
+                app:layout_constraintStart_toStartOf="@+id/textView60"
+                app:layout_constraintTop_toBottomOf="@+id/textView60"
+                app:srcCompat="@drawable/border_box" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nomor_ktm_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Nomor KTM"
+                app:layout_constraintEnd_toEndOf="@+id/img_ktm_umkm_mhs_profil"
+                app:layout_constraintStart_toStartOf="@+id/img_ktm_umkm_mhs_profil"
+                app:layout_constraintTop_toBottomOf="@+id/img_ktm_umkm_mhs_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_nomor_ktm_umkm_mhs_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_kampus_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Kampus"
+                app:layout_constraintEnd_toEndOf="@+id/img_ktm_umkm_mhs_profil"
+                app:layout_constraintStart_toStartOf="@+id/img_ktm_umkm_mhs_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_nomor_ktm_umkm_mhs_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_kampus_umkm_mhs_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_jurusan_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Jurusan"
+                app:layout_constraintEnd_toEndOf="@+id/til_kampus_umkm_mhs_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_kampus_umkm_mhs_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_kampus_umkm_mhs_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_jurusan_umkm_mhs_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_semester_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Semester"
+                app:layout_constraintEnd_toEndOf="@+id/til_jurusan_umkm_mhs_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_jurusan_umkm_mhs_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_jurusan_umkm_mhs_profil">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_semester_umkm_mhs_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:translationY="5dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_simpan_umkm_mhs_profil"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button"
+                android:text="Simpan Perubahan"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/til_semester_umkm_mhs_profil"
+                app:layout_constraintStart_toStartOf="@+id/til_semester_umkm_mhs_profil"
+                app:layout_constraintTop_toBottomOf="@+id/til_semester_umkm_mhs_profil" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
